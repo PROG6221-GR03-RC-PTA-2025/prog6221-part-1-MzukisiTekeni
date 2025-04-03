@@ -8,6 +8,11 @@ namespace POE_PART_1
 {
     internal class User
     {
-       
+        public string Name { get; set; }
+
+        public User(string Name)
+        {
+            this.Name = Name;
+        }
     }
 }
