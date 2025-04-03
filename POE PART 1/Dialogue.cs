@@ -6,6 +6,7 @@ using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Text.RegularExpressions;
 using Figgle;
+using System.Threading;
 
 namespace POE_PART_1
 {
@@ -37,6 +38,8 @@ namespace POE_PART_1
                 Console.ForegroundColor = ConsoleColor.White;
                 string userMessage = Console.ReadLine();
                 Regex.Replace(userMessage, @"[?]", "");
+
+
                 if (userMessage.ToLower().Equals("exit") || userMessage.ToLower().Contains("bye") ||
                     userMessage.ToLower().Contains("goodbye"))
                 {
@@ -47,11 +50,39 @@ namespace POE_PART_1
 
                     break;
                 }
-                string response = chatbot.Respond(userMessage, user);
-                Console.ForegroundColor = ConsoleColor.Green;
-                Console.Write(chatbot.Name + ": ");
-                Console.ForegroundColor = ConsoleColor.White;
-                Console.WriteLine(response);
+                else if (userMessage.Length > 200)//validating the length
+                {
+                    Console.ForegroundColor = ConsoleColor.Green;
+                    Console.Write(chatbot.Name + ": ");
+                    Console.ForegroundColor = ConsoleColor.White;
+                    Console.WriteLine("Input is too long please keep it under 500 characters");
+                    break;
+                }
+
+                else
+                {
+                    //Validating bad words
+                    string[] BadWords = { "badword1", "badword2" };
+
+                    foreach (string BadWord in BadWords)
+                    {
+                        if (userMessage.ToLower().Contains(BadWord))
+                        {
+                            Console.ForegroundColor = ConsoleColor.Green;
+                            Console.Write(chatbot.Name + ": ");
+                            Console.ForegroundColor = ConsoleColor.White;
+                            Console.WriteLine("Please use appropriate language");
+                            return;
+                        }
+                    }
+
+                    string response = chatbot.Respond(userMessage, user);
+                    Console.ForegroundColor = ConsoleColor.Green;
+                    Console.Write(chatbot.Name + ": ");
+                    Console.ForegroundColor = ConsoleColor.White;
+                    Console.WriteLine(response);
+                }
+
             }
         }
 
@@ -61,6 +92,23 @@ namespace POE_PART_1
             Console.ForegroundColor = ConsoleColor.Cyan;
             Console.WriteLine("CHAT ENDED........");
             Console.ForegroundColor = ConsoleColor.White;
+        }
+        public void ValidatingBadWords(string UserMessage)
+        {
+            string[] BadWords = { "badword1", "badword2" };
+
+            foreach (string BadWord in BadWords)
+            {
+                if (UserMessage.ToLower().Contains(BadWord))
+                {
+                    Console.ForegroundColor = ConsoleColor.Green;
+                    Console.Write(chatbot.Name + ": ");
+                    Console.ForegroundColor = ConsoleColor.White;
+                    Console.WriteLine("Please use appropriate language");
+                    return;
+                }
+            }
+
         }
     }
 }
