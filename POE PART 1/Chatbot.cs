@@ -23,7 +23,7 @@ namespace POE_PART_1
         }
         public string Respond(string UserMessage, User newUser)
         {
-            if (string.IsNullOrWhiteSpace(UserMessage))
+            if (string.IsNullOrWhiteSpace(UserMessage))//validating empty space
                 return "I didn't catch that. could you repeat?";
 
             UserMessage = UserMessage.ToLower();
