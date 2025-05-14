@@ -1,0 +1,10 @@
+C:\Users\RC_Student_lab\Desktop\Last One\prog6221-part-1-MzukisiTekeni\POE PART 1\bin\Debug\POE PART 1.exe.config
+C:\Users\RC_Student_lab\Desktop\Last One\prog6221-part-1-MzukisiTekeni\POE PART 1\bin\Debug\POE PART 1.exe
+C:\Users\RC_Student_lab\Desktop\Last One\prog6221-part-1-MzukisiTekeni\POE PART 1\bin\Debug\POE PART 1.pdb
+C:\Users\RC_Student_lab\Desktop\Last One\prog6221-part-1-MzukisiTekeni\POE PART 1\bin\Debug\Figgle.dll
+C:\Users\RC_Student_lab\Desktop\Last One\prog6221-part-1-MzukisiTekeni\POE PART 1\bin\Debug\Figgle.xml
+C:\Users\RC_Student_lab\Desktop\Last One\prog6221-part-1-MzukisiTekeni\POE PART 1\obj\Debug\POE PART 1.csproj.AssemblyReference.cache
+C:\Users\RC_Student_lab\Desktop\Last One\prog6221-part-1-MzukisiTekeni\POE PART 1\obj\Debug\POE PART 1.csproj.CoreCompileInputs.cache
+C:\Users\RC_Student_lab\Desktop\Last One\prog6221-part-1-MzukisiTekeni\POE PART 1\obj\Debug\POE PART 1.csproj.Up2Date
+C:\Users\RC_Student_lab\Desktop\Last One\prog6221-part-1-MzukisiTekeni\POE PART 1\obj\Debug\POE PART 1.exe
+C:\Users\RC_Student_lab\Desktop\Last One\prog6221-part-1-MzukisiTekeni\POE PART 1\obj\Debug\POE PART 1.pdb
